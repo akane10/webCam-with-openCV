@@ -8,10 +8,10 @@ const io = require('socket.io')(server);
 app.use(express.static('public'));
 
 const wCap = new cv.VideoCapture(0);
-wCap.set(cv.CAP_PROP_FRAME_WIDTH, 500);
-wCap.set(cv.CAP_PROP_FRAME_HEIGHT, 500);
+wCap.set(cv.CAP_PROP_FRAME_WIDTH, 400);
+wCap.set(cv.CAP_PROP_FRAME_HEIGHT, 400);
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
 	res.sendFile(__dirname+'/public/index.html');
 });
 
